@@ -35,6 +35,9 @@ class Bots(object):
     def __init__(self):
         self.points = 1000
 
+    def user_login(usernames, passwords):
+        bot.api.login(username=usernames, password=passwords, proxy=None, use_cookie=True, is_threaded=True)
+
     def face_detection(username):
         x = 0
         ''' Get user media and scan it for a face'''
