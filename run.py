@@ -34,6 +34,10 @@ ai.bot.login(username=args.u, password=args.p, proxy=args.proxy, use_cookie=True
 
 @app.route("/")
 def index():
+    return render_template("index.html");
+
+@app.route("/start_logged_in")
+def start_logged_in():
     ai.bot.api.get_self_username_info()
     profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
     followers = ai.bot.api.last_json["user"]["follower_count"]
