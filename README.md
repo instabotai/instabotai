@@ -42,7 +42,7 @@ git clone https://github.com/instabotai/instabotai.git or Click Download Above
 cd instabotai
 pip install -U pip
 pip install -r requirements.txt
-python run.py -u username -p password
+python run.py
 
 If you only want to use CLI run:
 python cli.py -u username -p password
@@ -52,7 +52,7 @@ python cli.py -u username -p password
 ``` bash
 git clone https://github.com/instabotai/instabotai.git
 docker build .
-sudo docker run -ti -p 8000:8000 YOURIMAGEID -u username -p password
+sudo docker run -ti -p 8000:8000 YOURIMAGEID
 [On Linux You need to change the run.py line 652 127.0.0.1 to 0.0.0.0 before building docker]
 
 ```
@@ -62,11 +62,11 @@ sudo docker run -ti -p 8000:8000 YOURIMAGEID -u username -p password
 If your system does not support tensorflow 2.0.
 Delete mtcnn folder
 Download it trough pip: pip install mtcnn
-python run.py -u username -p password
+python run.py
 ```
 
 ## Run: 
-python run.py -u yourusername -p yourpassword
+python run.py
 
 Open http://127.0.0.1:8000/ in your browser
 
