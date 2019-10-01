@@ -19,24 +19,12 @@ except NameError:
 COOKIES = {}
 bot = Bot(do_logout=True)
 
-parser = argparse.ArgumentParser(add_help=True)
-parser.add_argument('-u', type=str, help="username")
-parser.add_argument('-p', type=str, help="password")
-parser.add_argument('-proxy', type=str, help="proxy")
-args = parser.parse_args()
-username = str(args.u)
-
-
-# Check if user cookie exist
-bot.login(username=args.u, password=args.p, proxy=args.proxy, use_cookie=True)
-
-
 class Bots(object):
     def __init__(self):
         self.points = 1000
 
-    def user_login(usernames, passwords):
-        bot.api.login(username=usernames, password=passwords, proxy=None, use_cookie=True, is_threaded=True)
+    def user_login(username, password):
+        bot.api.login(username=username, password=password, proxy=None, use_cookie=True, is_threaded=True)
 
     def face_detection(username):
         x = 0

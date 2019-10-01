@@ -21,29 +21,23 @@ app = Flask(__name__)
 
 bot = ai.Bot(do_logout=True)
 
-parser = argparse.ArgumentParser(add_help=True)
-parser.add_argument('-u', type=str, help="username")
-parser.add_argument('-p', type=str, help="password")
-parser.add_argument('-proxy', type=str, help="proxy")
-args = parser.parse_args()
-username = str(args.u)
-
-# Check if user cookie exist
-ai.bot.login(username=args.u, password=args.p, proxy=args.proxy, use_cookie=True)
-
 
 @app.route("/")
 def index():
     return render_template("index.html");
 
-@app.route("/start_logged_in")
+@app.route("/start_logged_in", methods=['GET', 'POST'])
 def start_logged_in():
+    global username
+    username = request.form['username']
+    password = request.form['password']
+    ai.Bots.user_login(username, password)
     ai.bot.api.get_self_username_info()
     profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
     followers = ai.bot.api.last_json["user"]["follower_count"]
     following = ai.bot.api.last_json["user"]["following_count"]
     media_count = ai.bot.api.last_json["user"]["media_count"]
-    return render_template("index.html", username=username,
+    return render_template("logged_in.html", username=username,
                            profile_pic=profile_pic, followers=followers,
                            following=following, media_count=media_count);
 

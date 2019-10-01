@@ -308,8 +308,11 @@ class Bot(object):
                 atexit.register(self.logout)
                 return True
         self.prepare()
-        signal.signal(signal.SIGTERM, self.print_counters)
         atexit.register(self.print_counters)
+        if 'is_threaded' in args:
+            if args['is_threaded']:
+                return True
+        signal.signal(signal.SIGTERM, self.print_counters)
         return True
 
     def prepare(self):

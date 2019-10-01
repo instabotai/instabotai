@@ -22,121 +22,71 @@
 
 
 
-<body id="page-top">
-
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-
-<!--Navigation bar-->
-<div id="nav-placeholder">
-
-</div>
-
-    <!-- End of Sidebar -->
+<center>
 
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
+<!--    <div id="content-wrapper" class="d-flex flex-column">
+</div> -->      
       <!-- Main Content -->
-      <div id="content">
+      <div id="content" style="
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 300px;
+  " >
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button>
-
-          <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-         
-       <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Login</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
+<!--        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+<!--          </div>
+<!--      <center>
+<!--       <!-- Begin Page Content -->
+<!--        <div class="container-fluid">
+<!--
+<!--          <!-- Page Heading -->
+<!--          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+<!--            <h1 class="h3 mb-0 text-gray-800">Login</h1>
+    <!--          </div>      -->   
           <!-- Content Row -->
-          <div class="row">
-
-            <!-- Followers -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Followers</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ followers }}</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-user-friends fa-2x text-gray-400"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Followings -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Following</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ following }}</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-user-friends fa-2x text-gray-400"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
+                 <div class="row" >
+     
           <!-- Content Row -->
-
-              <!-- Start Bot Button --><div>Log In
-              <p></p>
-              <b>Username:</b>
-              <form method="POST" action="/start_logged_in">
-              <div class="form-group">
-              <input type="text" value="username" name="username">
-              <p>
-              <b>Password</b><p>
-              <input type="text" value="45" name="password">
-
-
-              </div>
-   
-                                  <i class="btn btn-primary btn-icon-split btn-lg">
+       <div style="
+       margin-left: -17%;
+        ">
+        Just Login with your Instagram username and password
+       </div>
+       <p><hr>
+           <!-- Start Bot Button --><div><h2>Sign In</h2>
+<p></p>
+<b>Username:</b>
+<form method="POST" action="/start_logged_in">
+<div class="form-group">
+<input type="text" value="" name="username">
+<hr>
+<b>Password</b><p>
+<input type="text" value="" name="password">
+<hr>
+<i class="btn btn-primary btn-icon-split btn-lg">
 <span class="icon text-white-50">
-                      <i class="fas fa-play"></i>
+                      <i class="fas fa-sign-in-alt"></i>
         <span class="text"><input style="background-color: Transparent; border: 0px; font-weight: 700; color: white; font-size: 25px;" type="submit" value="Log In">
      </span></i>
-      </form></div>
-      <br>
+              </form>  </div></div>
+          </div>
+          <br>
+          </center>
        <!-- /.container-fluid -->
 
-      </div>
+      
       <!-- End of Main Content -->
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
-          <div class="copyright text-center my-auto">
+          <div class="copyright text-center my-auto"
+            style="
+            margin-left:-13%;
+            "
+              >
               <span>Copyright &copy; <a href ="http://www.instabotai.com">instabotai.com</a> 2019</span>
           </div>
         </div>
@@ -145,35 +95,13 @@
 
     </div>
     <!-- End of Content Wrapper -->
-
+    </div></div>
   </div>
+</center>
   <!-- End of Page Wrapper -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap core JavaScript-->
+
   <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
@@ -186,13 +114,6 @@
   <!-- Page level plugins -->
   <script src="{{ url_for('static', filename='vendor/chart.js/Chart.min.js') }}"></script>
 
-
-
-<script>
-$(function(){
-  $("#nav-placeholder").load("{{ url_for('static', filename='menu.html') }}");
-});
-</script>
 
 
 </body>

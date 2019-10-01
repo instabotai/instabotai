@@ -70,7 +70,7 @@ class API(object):
         self.uuid = self.generate_UUID(uuid_type=True)
 
     def login(self, username=None, password=None, force=False, proxy=None,
-              use_cookie=True, cookie_fname=None):
+              use_cookie=True, cookie_fname=None, is_threaded=True):
         if use_cookie:
             return self.check_cookie(username=username, password=password, proxy=proxy)
         if not use_cookie and (not self.is_logged_in or force):
