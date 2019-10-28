@@ -27,10 +27,7 @@ except NameError:
 COOKIES = {}
 app = Flask(__name__)
 
-#bot = ai.Bot(do_logout=True)
 bot = ai.Bot(do_logout=True)
-#session["bot"] = bot
-#bot = session.get("bot")
 
 app.secret_key = str(random.random())
 def logoutput_open(username):
@@ -78,7 +75,6 @@ def challenge_solved():
                        profile_pic=profile_pic, followers=followers,
                        following=following, media_count=media_count);
 
-#    return render_template("logged_in.html", username=username);
 
 
 
@@ -123,9 +119,7 @@ def start_logged_in():
 #
     except Exception as e:
         ai.bot.logger.info(str(e))
-#        ai.bot.logger.info("Challange Required: Login to app and click 'This Was Me'")
-#        return render_template("index.html", username=username);
-#    ai.bot.api.get_self_username_info()
+
     profile_pic = open_file("profilepic")
     follower_count = open_file("followers_count")
     following_count = open_file("following_count")
@@ -787,4 +781,5 @@ def multibot():
                        following=following, media_count=media_count);
 
 if __name__ == "__main__":
-    SSLify(app.run(host='0.0.0.0', port=8000, debug=True, threaded=True))
+    SSLify(app.run(host='0.0.0.0', port=80, debug=True, threaded=True))
+#    app.run(host='0.0.0.0', port=80, debug=True)
