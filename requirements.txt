@@ -1,5 +1,6 @@
 instabot
 flask
+flask_sslify
 tensorflow==2.0.0rc0
 opencv-python
-OpenSSL
+pyOpenSSL
