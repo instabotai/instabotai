@@ -2,3 +2,4 @@ instabot
 flask
 tensorflow==2.0.0rc0
 opencv-python
+requests_toolbelt
