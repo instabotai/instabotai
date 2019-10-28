@@ -17,7 +17,6 @@ from instabotai import ai
 import subprocess
 from shutil import copyfile
 import re, io
-import pexpect
 
 try:
     input = raw_input
