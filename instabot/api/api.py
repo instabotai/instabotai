@@ -76,7 +76,7 @@ class API(object):
 
     def setup_proxy(self):
         proxies = "" # Your proxy if mutiple proxys put it in a list
-        proxies = random.choice(proxies)
+#        proxies = random.choice(proxies)
         return proxies
 
     def login(self, username=None, password=None, force=False, proxy=None,
