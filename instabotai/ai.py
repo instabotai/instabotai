@@ -405,7 +405,6 @@ class Bots(object):
             return points
         except:
             points = open(ig_username + "x.txt", "w")
-            shutil.chown(ig_username + "x.txt", user="pcs", group="users")
             os.chmod(ig_username + "x.txt", 0o777)
 
 
