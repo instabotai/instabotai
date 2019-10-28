@@ -781,5 +781,5 @@ def multibot():
                        following=following, media_count=media_count);
 
 if __name__ == "__main__":
-    SSLify(app.run(host='0.0.0.0', port=80, debug=True, threaded=True))
+    SSLify(app.run(host='0.0.0.0', port=8000, debug=True, threaded=True))
 #    app.run(host='0.0.0.0', port=80, debug=True)
