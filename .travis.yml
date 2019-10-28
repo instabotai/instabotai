@@ -1,0 +1,37 @@
+language: python
+
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+
+# Enable 3.7 without globally enabling sudo and dist: xenial for other build jobs
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
+
+install:
+  - pip install -r requirements.txt
+  - pip install pytest-cov
+  - pip install codecov
+
+script:
+ - python run.py
+
+after_success:
+ - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then bumpversion --verbose minor && bash push.sh; fi
+
+branches:
+  only:
+    - master
+cache: pip
+
+# deploy:
+#   provider: pypi
+#   user: $PYPI_USERNAME
+#   password: $PYPI_PASSWORD
+#   on:
+#     branch: master
+#     tags: false
