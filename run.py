@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-import OpenSSL
-from flask_sslify import SSLify
 import signal
 import os
 from flask import Flask, render_template, request, session
@@ -780,5 +778,4 @@ def multibot():
                        following=following, media_count=media_count);
 
 if __name__ == "__main__":
-    SSLify(app.run(host='0.0.0.0', port=8000, debug=True, threaded=True))
-#    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='127.0.0.1', port=8000, debug=False)
