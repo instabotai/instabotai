@@ -20,7 +20,8 @@ username = str(args.u)
 
 
 # Login
-bot.login(username=args.u, password=args.p, proxy=args.proxy, use_cookie=True)
+ai.Bots.user_login(args.u, args.p)
+#bot.login(username=args.u, password=args.p, proxy=args.proxy, use_cookie=True)
 #ai.Bots.follow_users_hashtag_ai("fitness, programming", 45)
 #ai.Bots.follow_users_followers_ai("japenhaven", 40)
 ai.Bots.follow_users_following_ai("japanheaven", 40)
