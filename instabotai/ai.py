@@ -429,6 +429,7 @@ class Bots(object):
         points = int(points)
         points -= 1
         if points < 0:
+            increase.write("0")
             print("Buy More Coins Here https://www.patreon.com/instabotai")
             Bots.save_user_info(ig_username, "Buy for 1 month for only $49 with unlimited tasks <a href='https://www.fiverr.com/hourapp/manage-your-instagram-account-with-ai'> Here!</a>")
             print("To get key when bought talk to us here: https://web.telegram.org/#/im?p=@instabotai")
