@@ -20,7 +20,7 @@ Unlike other bots, Instabotai does not require Selenium or a WebDriver. Instead,
 * Microsoft Visual C++ 2015 Redistributable Update 3 
 * https://www.microsoft.com/en-us/download/details.aspx?id=53587 (Only required for Windows Users)
 
-## Demo 
+## Try our remote solution: 
 http://www.instabotai.com
 
 ## Features
