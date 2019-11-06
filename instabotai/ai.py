@@ -186,10 +186,12 @@ class Bots(object):
                     detect = detector.detect_faces(img)
                     if not detect:
                         bot.logger.info("no face detected " + bot.get_link_from_media_id(media))
+                        Bots.save_user_info(ig_username, "no face detected " + bot.get_link_from_media_id(media))
                         x += 1
 
                     elif detect:
                         bot.logger.info("there was a face detected")
+                        Bots.save_user_info(ig_username, "==> There was a face detected! <==")
                         bot.api.upload_photo(path, caption=caption)
                         does_exist = bot.get_media_comments(media, only_text=True)
                         if str(username) in does_exist:
@@ -198,6 +200,7 @@ class Bots(object):
                         else:
                             display_url = bot.get_link_from_media_id(media)
                             bot.logger.info("reposted " + display_url + " by " + username)
+                            Bots.save_user_info(ig_username, "reposted " + display_url + " by " + username)
                             Bots.payment_system()
                             x += 1
                     else:
@@ -206,6 +209,8 @@ class Bots(object):
                 except Exception as e:
                     bot.logger.info(e)
                     x += 1
+                    Bots.save_user_info(ig_username, str(e))
+            shutil.rmtree(username, ignore_errors=True) # Remove dir username after scanning
 
     def face_detection_follow(username):
         Bots.save_user_info(ig_username, "No Worries pls wait 10-120 seconds")
@@ -361,6 +366,9 @@ class Bots(object):
 
     def unfollow_users():
         bot.unfollow_everyone()
+
+    def unfollow_non_followers():
+        bot.unfollow_non_followers()
 
     def convert_usernames_to_list(usernames):
         newlist = []

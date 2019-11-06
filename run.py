@@ -224,6 +224,32 @@ def like_following():
                            profile_pic=profile_pic, followers=followers,
                            following=following, media_count=media_count);
 
+@app.route("/repost_images_ai")
+def repost_images_ai():
+    username = session.get("username")
+    profile_pic = session.get("profile_pic")
+    followers = session.get("follower_count")
+    following = session.get("following_count")
+    media_count = session.get("media_count")
+    logoutput = logoutput_open(username)
+
+    return render_template("repost_users_images.html", username=username,
+                           profile_pic=profile_pic, followers=followers,
+                           following=following, media_count=media_count, logoutput=logoutput);
+
+@app.route("/unfollow_non_followers")
+def unfollow_non_followers():
+    username = session.get("username")
+    profile_pic = session.get("profile_pic")
+    followers = session.get("follower_count")
+    following = session.get("following_count")
+    media_count = session.get("media_count")
+    logoutput = logoutput_open(username)
+
+    return render_template("unfollow_non_followers.html", username=username,
+                           profile_pic=profile_pic, followers=followers,
+                           following=following, media_count=media_count, logoutput=logoutput);
+
 @app.route("/like_followingai")
 def like_followingai():
     username = session.get("username")
@@ -351,6 +377,35 @@ def like_self_media_comments():
                        profile_pic=profile_pic, followers=followers,
                        following=following, media_count=media_count);
 
+@app.route("/start_repost_images", methods=['GET', 'POST'])
+def start_repost_images():
+    username = session.get("username")
+    profile_pic = session.get("profile_pic")
+    followers = session.get("follower_count")
+    following = session.get("following_count")
+    media_count = session.get("media_count")
+    password = session.get("password")
+    followers_username = request.form['following_username']
+    img_caption = request.form['img_caption']
+    time_sleep = request.form['time_sleep']
+    process = subprocess.Popen(["python repost_users_images.py " "-u " + username + " -p " + password + " -user " + "'" + followers_username + "'" + " -caption " + "'" + img_caption + "'" + " -sleep " + time_sleep], shell=True)
+
+    return render_template("repost_users_images.html", username=username)
+
+
+@app.route("/start_unfollow_non_followers", methods=['GET', 'POST'])
+def start_unfollow_non_followers():
+    username = session.get("username")
+    profile_pic = session.get("profile_pic")
+    followers = session.get("follower_count")
+    following = session.get("following_count")
+    media_count = session.get("media_count")
+    password = session.get("password")
+    process = subprocess.Popen(["python unfollow_nonfollowers.py " "-u " + username + " -p " + password], shell=True)
+
+    return render_template("unfollow_non_followers.html", username=username)
+
+
 @app.route("/start_like_followingai", methods=['GET', 'POST'])
 def start_like_followingai():
     x = 0
@@ -408,10 +463,10 @@ def start_comment_hashtagsai():
     hashtags = request.form['following_username']
     comment = request.form['comment']
     time_sleep = request.form['time_sleep']
-    process = subprocess.Popen(["python comment_hashtagsai.py " "-u " + username + " -p " + password + " -hashtags " + hashtags + " -comment " + comment + " -sleep " + time_sleep], shell=True)
+    process = subprocess.Popen(["python comment_hashtagsai.py " "-u " + username + " -p " + password + " -hashtags " + "'" + hashtags + "'" + " -comment " + "'" + comment + "'" + " -sleep " + time_sleep], shell=True)
     session["subprocess"] = process.pid
 #    ai.Bots.user_hashtag_comment(hashtags, comment, time_sleep)
-    return render_template("like_followersai.html", username=username,
+    return render_template("comment_hashtagai.html", username=username,
                        profile_pic=profile_pic, followers=followers,
                        following=following, media_count=media_count);
 

@@ -20,6 +20,27 @@
 
 </head>
 
+<script type="text/javascript"
+    src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(document).ready(
+function() {
+$.ajaxSetup({
+cache: false
+ });
+var username = '{{ username }}';
+setInterval(function() {
+var min=1; 
+var max=1000;  
+var random = Math.floor(Math.random() * (+max - +min)) + +min;
+    $('#show').load("{{ url_for('static', filename= username + 'info.txt')}}");
+   
+    $('#show').scrollTop($('#show')[0].scrollHeight);
+
+               }, 3000);
+
+            });
+</script>
 
 
 <body id="page-top">
@@ -291,12 +312,13 @@
 
               <!-- Start Bot Button --><div>Comment Hashtag  AI
               <p></p>
-              <b>Hashtag:</b>
-          <form method="POST" action="/start_comment_hashtagsai">
+              <b>Users:</b>
+              <form method="POST" action="/start_repost_images">
               <div class="form-group">
-              <input type="text" value="{{ username }}" name="following_username">
-              <p><b>Comment</b><p>
-              <input type="text" value="{{ main_comment }}" name="comment">
+              <input type="text" value="japanheaven, maskofshiva, joerogan" name="following_username">
+              <p> 
+                  <b>Caption</b><p>
+              <input type="text" value="follow me back" name="img_caption">
 
               <p>
               <b> Time between likes in seconds</b><p>
@@ -334,9 +356,18 @@
                   </div>
                 </div>
                 <!-- Card Body --><p>
-                <center>               Coming Soon</center><p>
+
+    <div id="show" style=  
+"  width: 100%;
+  height: 550px;
+overflow: scroll;"
+         align="center"></div>
+
+                <p>
+                <center>              </center><p>
               </div>
             </div>
+
         <!-- /.container-fluid -->
 
       </div>
