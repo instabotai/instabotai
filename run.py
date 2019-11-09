@@ -613,9 +613,10 @@ def start_follow_followers():
     time_sleep = str(time_sleep)
     followers_username = request.form['followers_username']
 #    ai.bot.follow_followers(followers_username)
+    followers_username = str(followers_username)
     ai.Bots.follow_users_followers_ai(followers_username, time_sleep)
 #    process = subprocess.Popen(["python follow_followers.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
-    session["subprocess"] = process.pid
+ #   session["subprocess"] = process.pid
 
     return render_template("follow_followers.html", username=username,
                        profile_pic=profile_pic, followers=followers,
@@ -632,10 +633,11 @@ def start_follow_following():
     time_sleep = request.form['time_sleep']
     time_sleep = str(time_sleep)
     followers_username = request.form['followers_username']
+    followers_username = str(followers_username)
     ai.Bots.follow_users_following_ai(followers_username, time_sleep)
 #    ai.bot.follow_following(followers_username)
 #    process = subprocess.Popen(["python follow_following.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
-    session["subprocess"] = process.pid
+#    session["subprocess"] = process.pid
 
     return render_template("follow_followings.html", username=username,
                        profile_pic=profile_pic, followers=followers,
