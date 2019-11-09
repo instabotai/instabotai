@@ -494,6 +494,7 @@ class Bots(object):
                     for user_id in followings:
                         username = bot.get_username_from_user_id(user_id)
                         Bots.face_detection_follow(username)
+                        time_sleep = int(time_sleep)
                         time.sleep(time_sleep)
             except:
                 user_id = bot.get_user_id_from_username(username)
@@ -501,6 +502,7 @@ class Bots(object):
                 for user_id in followings:
                     username = bot.get_username_from_user_id(user_id)
                     Bots.face_detection_follow(username)
+                    time_sleep = int(time_sleep)
                     time.sleep(time_sleep)
 
 
@@ -515,6 +517,7 @@ class Bots(object):
                     for user_id in followers:
                         username = bot.get_username_from_user_id(user_id)
                         Bots.face_detection_follow(username)
+                        time_sleep = int(time_sleep)
                         time.sleep(time_sleep)
             except:
                 user_id = bot.get_user_id_from_username(username)
@@ -522,6 +525,7 @@ class Bots(object):
                 for user_id in followers:
                     username = bot.get_username_from_user_id(user_id)
                     Bots.face_detection_follow(username)
+                    time_sleep = int(time_sleep)
                     time.sleep(time_sleep)
 
 
