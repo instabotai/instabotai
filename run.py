@@ -92,6 +92,7 @@ def start_logged_in():
     try:
         ai.Bots.user_login(username=username, password=password, proxys=None)
         time.sleep(5)
+        ai.bot.api.get_self_username_info()
         profilepic = ai.bot.api.last_json["user"]["profile_pic_url"]
         followers_count = ai.bot.api.last_json["user"]["follower_count"]
         following_count = ai.bot.api.last_json["user"]["following_count"]
