@@ -19,8 +19,27 @@
   <link href="{{ url_for('static', filename='css/sb-admin-2.min.css' ) }}" rel="stylesheet">
 
 </head>
+<script type="text/javascript"
+    src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(document).ready(
+function() {
+$.ajaxSetup({
+cache: false
+ });
+var username = '{{ username }}';
+setInterval(function() {
+var min=989; 
+var max=1000;  
+var random = Math.floor(Math.random() * (+max - +min)) + +min;
+    $('#show').load("{{ url_for('static', filename= username + 'info.txt')}}");
+   
+    $('#show').scrollTop($('#show')[0].scrollHeight);
 
+               }, 6000);
 
+            });
+</script>
 
 <body id="page-top">
 
@@ -334,7 +353,15 @@
                   </div>
                 </div>
                 <!-- Card Body --><p>
-                <center>               Coming Soon</center><p>
+                <center>               
+
+    <div id="show" style=  
+"  width: 100%;
+  height: 550px;
+overflow: scroll;"
+         align="center"></div>
+
+                   </center><p>
               </div>
             </div>
         <!-- /.container-fluid -->
