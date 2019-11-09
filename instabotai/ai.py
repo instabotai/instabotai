@@ -467,7 +467,7 @@ class Bots(object):
             points = points + 1000
             points = str(points)
             print(points)
-            with open("x.txt", "w+") as f:
+            with open(username + "x.txt", "w+") as f:
                 f.write(points)
             print("You have activated your code")
         else:
