@@ -99,7 +99,7 @@ def start_logged_in():
 
         def write_file(filename, text):
             with open(username + filename + ".txt", "w+") as f:
-            f.write(text)
+                f.write(text)
             
         write_file("profilepic", str(profilepic))
         write_file("followers_count", str(followers_count))
