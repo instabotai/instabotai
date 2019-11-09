@@ -90,10 +90,22 @@ def start_logged_in():
     username = session.get("username")
 
     try:
-        global process
         ai.Bots.user_login(username=username, password=password, proxys=None)
         time.sleep(5)
+        profilepic = ai.bot.api.last_json["user"]["profile_pic_url"]
+        followers_count = ai.bot.api.last_json["user"]["follower_count"]
+        following_count = ai.bot.api.last_json["user"]["following_count"]
+        media_count = ai.bot.api.last_json["user"]["media_count"]
 
+        def write_file(filename, text):
+            with open(username + filename + ".txt", "w+") as f:
+            f.write(text)
+            
+        write_file("profilepic", str(profilepic))
+        write_file("followers_count", str(followers_count))
+        write_file("following_count", str(following_count))
+        write_file("media_count", str(media_count))
+        
         with open("check_password.txt", "r") as f:
             check_password = f.read()
             f.close()
