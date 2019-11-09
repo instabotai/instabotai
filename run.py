@@ -726,7 +726,8 @@ def watch_all_stories():
     number_last_photos = 1
     following_username = request.form['following_username']
     time_sleep = request.form['time_sleep']
-    ai.Bots.like_following(following_username, time_sleep)
+    ai.Bots.watch_stories(following_username, time_sleep)
+#    ai.Bots.like_following(following_username, time_sleep)
 #    process = subprocess.Popen(["python watch_stories.py " "-u " + username + " -p " + password + " -user " + following_username + " -sleep " + time_sleep], shell=True)
 #    session["subprocess"] = process.pid
 
