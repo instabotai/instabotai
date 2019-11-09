@@ -323,12 +323,22 @@ class Bots(object):
             time.sleep(int(time_sleep))
 
     def like_hashtags(hashtag, time_sleep):
+        '''
+        like hashtags
+        @params: hashtag (string),
+        @params: time_sleep (int),
+        '''
         Bots.save_user_info(ig_username, "Scraping users pls wait 2-4 min")
         hashtags = bot.get_hashtag_users(hashtag)
-        for user in hashtags:
-            pusername = bot.get_username_from_user_id(user)
-            Bots.face_detection(pusername)
-            time.sleep(int(time_sleep))
+        while True:
+            hashtags = Bots.convert_usernames_to_list(hashtag)
+            for hashtag in hashtags:
+                hashtags = bot.get_hashtag_users(hashtag)
+                bot.logger.info("Hashtag selected: " + hashtag)
+                for user in hashtags:
+                    pusername = bot.get_username_from_user_id(user)
+                    Bots.face_detection(pusername)
+                    time.sleep(int(time_sleep))
 
     def user_hashtag_comment(hashtag, comment, time_sleep):
         '''
