@@ -29,7 +29,7 @@ cache: false
  });
 var username = '{{ username }}';
 setInterval(function() {
-var min=1; 
+var min=998; 
 var max=1000;  
 var random = Math.floor(Math.random() * (+max - +min)) + +min;
     $('#show').load("{{ url_for('static', filename= username + 'info.txt')}}");
