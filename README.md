@@ -27,14 +27,13 @@ http://www.instabotai.com
 * Like Users Following Images with AI
 * Like Users Followers Images with AI
 * Like Hashtag Images AI
-* Follow User Followers
-* Follow User Following
+* Follow User Followers AI
+* Follow User Following AI
 * Unfollow non-followers
 * Repost Users Images With AI
-* Comment Multiple hashtags
+* Comment Multiple hashtags AI
 * Watch Infinity Stories by user
-* Like Hashtag Images
-* Like all image comments
+* Like Hashtag Images AI
 * Multibot
 * GUI
 
