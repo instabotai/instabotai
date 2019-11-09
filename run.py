@@ -91,7 +91,7 @@ def start_logged_in():
 
     try:
         global process
-        process = subprocess.Popen(["python process.py " "-u " + "'" + username + "'" + " -p " + "'" + password + "'"], stdin=subprocess.PIPE, shell=True)
+        ai.Bots.user_login(username=username, password=password, proxys=None)
         time.sleep(5)
 
         with open("check_password.txt", "r") as f:
@@ -388,7 +388,8 @@ def start_repost_images():
     followers_username = request.form['following_username']
     img_caption = request.form['img_caption']
     time_sleep = request.form['time_sleep']
-    process = subprocess.Popen(["python repost_users_images.py " "-u " + username + " -p " + password + " -user " + "'" + followers_username + "'" + " -caption " + "'" + img_caption + "'" + " -sleep " + time_sleep], shell=True)
+    ai.Bots.repost_users_images(followers_username, img_caption, time_sleep)
+#    process = subprocess.Popen(["python repost_users_images.py " "-u " + username + " -p " + password + " -user " + "'" + followers_username + "'" + " -caption " + "'" + img_caption + "'" + " -sleep " + time_sleep], shell=True)
 
     return render_template("repost_users_images.html", username=username)
 
@@ -401,7 +402,8 @@ def start_unfollow_non_followers():
     following = session.get("following_count")
     media_count = session.get("media_count")
     password = session.get("password")
-    process = subprocess.Popen(["python unfollow_nonfollowers.py " "-u " + username + " -p " + password], shell=True)
+    ai.Bots.unfollow_non_followers()
+#    process = subprocess.Popen(["python unfollow_nonfollowers.py " "-u " + username + " -p " + password], shell=True)
 
     return render_template("unfollow_non_followers.html", username=username)
 
@@ -417,7 +419,8 @@ def start_like_followingai():
     password = session.get("password")
     followers_username = request.form['following_username']
     time_sleep = request.form['time_sleep']
-    process = subprocess.Popen(["python like_followingai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
+    ai.Bots.like_following(followers_username, time_sleep)
+#    process = subprocess.Popen(["python like_followingai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
 
     return render_template("like_followingai.html", username=username)
 
@@ -463,8 +466,9 @@ def start_comment_hashtagsai():
     hashtags = request.form['following_username']
     comment = request.form['comment']
     time_sleep = request.form['time_sleep']
-    process = subprocess.Popen(["python comment_hashtagsai.py " "-u " + username + " -p " + password + " -hashtags " + "'" + hashtags + "'" + " -comment " + "'" + comment + "'" + " -sleep " + time_sleep], shell=True)
-    session["subprocess"] = process.pid
+    ai.Bots.user_hashtag_comment(hashtags, comment, time_sleep)
+#    process = subprocess.Popen(["python comment_hashtagsai.py " "-u " + username + " -p " + password + " -hashtags " + "'" + hashtags + "'" + " -comment " + "'" + comment + "'" + " -sleep " + time_sleep], shell=True)
+#    session["subprocess"] = process.pid
 #    ai.Bots.user_hashtag_comment(hashtags, comment, time_sleep)
     return render_template("comment_hashtagai.html", username=username,
                        profile_pic=profile_pic, followers=followers,
@@ -509,8 +513,8 @@ def start_like_followersai():
     password = session.get("password")
     followers_username = request.form['following_username']
     time_sleep = request.form['time_sleep']
-#    ai.Bots.like_followers(followers_username, time_sleep)
-    process = subprocess.Popen(["python like_followersai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
+    ai.Bots.like_followers(followers_username, time_sleep)
+#    process = subprocess.Popen(["python like_followersai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
     session["subprocess"] = process.pid
     return render_template("like_followersai.html", username=username,
                        profile_pic=profile_pic, followers=followers,
@@ -543,9 +547,9 @@ def start_like_hashtagsai():
     number_last_photos = 1
     hashtags = request.form['following_username']
     time_sleep = request.form['time_sleep']
-#    ai.Bots.like_hashtags(hashtags, time_sleep)
-    process = subprocess.Popen(["python like_hashtagsai.py " "-u " + username + " -p " + password + " -user " + hashtags + " -sleep " + time_sleep], shell=True)
-    session["subprocess"] = process.pid
+    ai.Bots.like_hashtags(hashtags, time_sleep)
+#    process = subprocess.Popen(["python like_hashtagsai.py " "-u " + username + " -p " + password + " -user " + hashtags + " -sleep " + time_sleep], shell=True)
+#    session["subprocess"] = process.pid
 
     return render_template("like_followersai.html", username=username,
                        profile_pic=profile_pic, followers=followers,
@@ -596,8 +600,8 @@ def start_follow_followers():
     time_sleep = str(time_sleep)
     followers_username = request.form['followers_username']
 #    ai.bot.follow_followers(followers_username)
-#    ai.Bots.follow_users_followers_ai(followers_username, time_sleep)
-    process = subprocess.Popen(["python follow_followers.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
+    ai.Bots.follow_users_followers_ai(followers_username, time_sleep)
+#    process = subprocess.Popen(["python follow_followers.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
     session["subprocess"] = process.pid
 
     return render_template("follow_followers.html", username=username,
@@ -615,9 +619,9 @@ def start_follow_following():
     time_sleep = request.form['time_sleep']
     time_sleep = str(time_sleep)
     followers_username = request.form['followers_username']
-#    ai.Bots.follow_users_following_ai(followers_username, time_sleep)
+    ai.Bots.follow_users_following_ai(followers_username, time_sleep)
 #    ai.bot.follow_following(followers_username)
-    process = subprocess.Popen(["python follow_following.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
+#    process = subprocess.Popen(["python follow_following.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
     session["subprocess"] = process.pid
 
     return render_template("follow_followings.html", username=username,
@@ -707,9 +711,9 @@ def watch_all_stories():
     number_last_photos = 1
     following_username = request.form['following_username']
     time_sleep = request.form['time_sleep']
-#    ai.Bots.like_following(following_username, time_sleep)
-    process = subprocess.Popen(["python watch_stories.py " "-u " + username + " -p " + password + " -user " + following_username + " -sleep " + time_sleep], shell=True)
-    session["subprocess"] = process.pid
+    ai.Bots.like_following(following_username, time_sleep)
+#    process = subprocess.Popen(["python watch_stories.py " "-u " + username + " -p " + password + " -user " + following_username + " -sleep " + time_sleep], shell=True)
+#    session["subprocess"] = process.pid
 
     return render_template("watch_stories.html", username=username,
                            profile_pic=profile_pic, followers=followers,
