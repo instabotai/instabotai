@@ -31,8 +31,7 @@ http://www.instabotai.com
 * Follow User Following
 * Unfollow non-followers
 * Repost Users Images With AI
-* Comment User Followers
-* Comment User Following
+* Comment Multiple hashtags
 * Watch Infinity Stories by user
 * Like Hashtag Images
 * Like all image comments
