@@ -481,6 +481,7 @@ def start_comment_hashtagsai():
     hashtags = request.form['following_username']
     comment = request.form['comment']
     time_sleep = request.form['time_sleep']
+    time_sleep = int(time_sleep)
     ai.Bots.user_hashtag_comment(hashtags, comment, time_sleep)
 #    process = subprocess.Popen(["python comment_hashtagsai.py " "-u " + username + " -p " + password + " -hashtags " + "'" + hashtags + "'" + " -comment " + "'" + comment + "'" + " -sleep " + time_sleep], shell=True)
 #    session["subprocess"] = process.pid
@@ -563,6 +564,7 @@ def start_like_hashtagsai():
     number_last_photos = 1
     hashtags = request.form['following_username']
     time_sleep = request.form['time_sleep']
+    time_sleep = int(time_sleep)
     ai.Bots.like_hashtags(hashtags, time_sleep)
 #    process = subprocess.Popen(["python like_hashtagsai.py " "-u " + username + " -p " + password + " -user " + hashtags + " -sleep " + time_sleep], shell=True)
 #    session["subprocess"] = process.pid
@@ -638,6 +640,7 @@ def start_follow_following():
     time_sleep = str(time_sleep)
     followers_username = request.form['followers_username']
     followers_username = str(followers_username)
+    time_sleep = int(time_sleep)
     ai.Bots.follow_users_following_ai(followers_username, time_sleep)
 #    ai.bot.follow_following(followers_username)
 #    process = subprocess.Popen(["python follow_following.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
@@ -730,6 +733,7 @@ def watch_all_stories():
     number_last_photos = 1
     following_username = request.form['following_username']
     time_sleep = request.form['time_sleep']
+    time_sleep = int(time_sleep)
     ai.Bots.watch_stories(following_username, time_sleep)
 #    ai.Bots.like_following(following_username, time_sleep)
 #    process = subprocess.Popen(["python watch_stories.py " "-u " + username + " -p " + password + " -user " + following_username + " -sleep " + time_sleep], shell=True)
