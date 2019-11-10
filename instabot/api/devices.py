@@ -1,6 +1,6 @@
 # Devices taken from
 # https://github.com/mgp25/Instagram-API/blob/master/src/Devices/GoodDevices.php
-DEFAULT_DEVICE = 'samsung_galaxy_s7'
+DEFAULT_DEVICE = 'samsung_galaxy_s9_plus'
 DEVICES = {
     # Released on March 2016
     'samsung_galaxy_s7': {
@@ -28,7 +28,7 @@ DEVICES = {
     },
     # Released on February 2018
     'samsung_galaxy_s9_plus': {
-        'instagram_version': '96.0.0.28.114',
+        'instagram_version': '118.0.0.28.122',
         'android_version': 24,
         'android_release': '7.0',
         'dpi': '640dpi',
