@@ -401,6 +401,7 @@ def start_repost_images():
     followers_username = request.form['following_username']
     img_caption = request.form['img_caption']
     time_sleep = request.form['time_sleep']
+    time_sleep = int(time_sleep)
     ai.Bots.repost_users_images(followers_username, img_caption, time_sleep)
 #    process = subprocess.Popen(["python repost_users_images.py " "-u " + username + " -p " + password + " -user " + "'" + followers_username + "'" + " -caption " + "'" + img_caption + "'" + " -sleep " + time_sleep], shell=True)
 
@@ -432,6 +433,7 @@ def start_like_followingai():
     password = session.get("password")
     followers_username = request.form['following_username']
     time_sleep = request.form['time_sleep']
+    time_sleep = int(time_sleep)
     ai.Bots.like_following(followers_username, time_sleep)
 #    process = subprocess.Popen(["python like_followingai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
 
@@ -526,6 +528,7 @@ def start_like_followersai():
     password = session.get("password")
     followers_username = request.form['following_username']
     time_sleep = request.form['time_sleep']
+    time_sleep = int(time_sleep)
     ai.Bots.like_followers(followers_username, time_sleep)
 #    process = subprocess.Popen(["python like_followersai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
     session["subprocess"] = process.pid
