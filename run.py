@@ -617,6 +617,7 @@ def start_follow_followers():
     followers_username = request.form['followers_username']
 #    ai.bot.follow_followers(followers_username)
     followers_username = str(followers_username)
+    time_sleep = int(time_sleep)
     ai.Bots.follow_users_followers_ai(followers_username, time_sleep)
 #    process = subprocess.Popen(["python follow_followers.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
  #   session["subprocess"] = process.pid
