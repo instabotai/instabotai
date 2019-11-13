@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='instabotai',
-    version='1.10.00',
+    version='1.50.00',
     description='Instagram bot scripts for promotion and API python wrapper.',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -24,7 +24,9 @@ setup(
         'tqdm>=4.30.0',
         'instabot',
         'tensorflow==2.0.0rc0',
-        'flask'
+        'flask',
+        'opencv-python',
+        'requests_toolbelt'
     ],
     entry_points={
         'console_scripts': ['instabotai=instabotai:main'],
