@@ -449,17 +449,17 @@ class Bots(object):
         if points < 0:
             increase.write("0")
             print("Buy More Coins Here https://www.patreon.com/instabotai")
-            Bots.save_user_info(ig_username, "Buy for 1 month for only $49 with unlimited tasks <a href='https://www.fiverr.com/hourapp/manage-your-instagram-account-with-ai'> Here!</a>")
+            Bots.save_user_info(ig_username, "Buy for 1 month for only $29 with unlimited tasks <a href='https://www.fiverr.com/hourapp/manage-your-instagram-account-with-ai'> Here!</a>")
             print("To get key when bought talk to us here: https://web.telegram.org/#/im?p=@instabotai")
             Bots.stop()
         increase.write(str(points))
         increase.close()
         print("=" * 30)
         Bots.save_user_info(ig_username, "=" * 30)
-        Bots.save_user_info(ig_username, "Buy 1 month for only $49 with unlimited tasks<a href='https://www.fiverr.com/hourapp/manage-your-instagram-account-with-ai' target='_blank'> Here!</a>")
+        Bots.save_user_info(ig_username, "Buy 1 month for only $29 with unlimited tasks<a href='https://www.fiverr.com/hourapp/manage-your-instagram-account-with-ai' target='_blank'> Here!</a>")
         print("Buy 20.000 more COINS send 0.001 BTC to 12R5b4rLyNL8cC2HYQi5NpdPNaaAxPnmfe")
         print("To get key when bought talk to us here: https://web.telegram.org/#/im?p=@instabotai")
-        Bots.save_user_info(ig_username, "For support talk to us here: https://web.telegram.org/#/im?p=@instabotai")
+        Bots.save_user_info(ig_username, "For support talk to us here: <a href='https://web.telegram.org/#/im?p=@instabotai' target='_blank'> Here!</a>")
 
 
     def activate_code(code):
