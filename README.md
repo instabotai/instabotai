@@ -55,6 +55,7 @@ python3 cli.py -u username -p password
 ``` bash
 git clone https://github.com/instabotai/instabotai.git
 docker build .
+docker image ls
 sudo docker run -ti -p 8000:8000 YOURIMAGEID
 [On Linux You need to change the run.py line 652 127.0.0.1 to 0.0.0.0 before building docker]
 
