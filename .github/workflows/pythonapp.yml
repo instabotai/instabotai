@@ -28,4 +28,4 @@ jobs:
       run: |
         
         pip install pytest
-        pytest -q run.py
+        pytest -W ignore::UserWarning -q run.py
