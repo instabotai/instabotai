@@ -28,4 +28,4 @@ jobs:
       run: |
         
         pip install pytest
-        pytest -q run.py --disable-pytest-warnings
+        pytest --disable-pytest-warnings -q run.py
