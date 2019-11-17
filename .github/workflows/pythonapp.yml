@@ -26,6 +26,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pycodestyle
       run: |
-        python run.py
+        python tests.py
     #    pip install pycodestyle
     #    pycodestyle --show-source
