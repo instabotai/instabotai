@@ -28,4 +28,4 @@ jobs:
       run: |
         
         pip install pytest
-        pytest -W ignore::UserWarning -q run.py
+        pytest -q run.py --disable-pytest-warnings
