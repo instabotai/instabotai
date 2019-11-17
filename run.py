@@ -176,17 +176,17 @@ def start_activate():
                        profile_pic=profile_pic, followers=followers,
                        following=following, media_count=media_count);
 
-@app.route("/like_comments")
-def like_comments():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
-
-    return render_template("like_comments.html", username=username,
-                           profile_pic=profile_pic, followers=followers,
-                           following=following, media_count=media_count);
+#@app.route("/like_comments")
+#def like_comments():
+#    ai.bot.api.get_self_username_info()
+#    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+#    followers = ai.bot.api.last_json["user"]["follower_count"]
+#    following = ai.bot.api.last_json["user"]["following_count"]
+#    media_count = ai.bot.api.last_json["user"]["media_count"]
+#
+#    return render_template("like_comments.html", username=username,
+#                           profile_pic=profile_pic, followers=followers,
+#                           following=following, media_count=media_count);
 
 @app.route("/watch_infinity_stories")
 def watch_infinity_stories():
@@ -201,41 +201,41 @@ def watch_infinity_stories():
                            profile_pic=profile_pic, followers=followers,
                            following=following, media_count=media_count);
 
-@app.route("/multibot")
-def multibots():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
+#@app.route("/multibot")
+#def multibots():
+#    ai.bot.api.get_self_username_info()
+#    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+#    followers = ai.bot.api.last_json["user"]["follower_count"]
+#    following = ai.bot.api.last_json["user"]["following_count"]
+#    media_count = ai.bot.api.last_json["user"]["media_count"]
 
-    return render_template("multibot.html", username=username,
-                           profile_pic=profile_pic, followers=followers,
-                           following=following, media_count=media_count);
+#    return render_template("multibot.html", username=username,
+#                           profile_pic=profile_pic, followers=followers,
+#                           following=following, media_count=media_count);
 
-@app.route("/like_followers")
-def like_followers():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
+#@app.route("/like_followers")
+#def like_followers():
+#    ai.bot.api.get_self_username_info()
+#    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+#    followers = ai.bot.api.last_json["user"]["follower_count"]
+#    following = ai.bot.api.last_json["user"]["following_count"]
+#    media_count = ai.bot.api.last_json["user"]["media_count"]
 
-    return render_template("like_followers.html", username=username,
-                           profile_pic=profile_pic, followers=followers,
-                           following=following, media_count=media_count);
+#    return render_template("like_followers.html", username=username,
+#                           profile_pic=profile_pic, followers=followers,
+#                           following=following, media_count=media_count);
 
-@app.route("/like_following")
-def like_following():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
+#@app.route("/like_following")
+#def like_following():
+#    ai.bot.api.get_self_username_info()
+#    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+#    followers = ai.bot.api.last_json["user"]["follower_count"]
+#    following = ai.bot.api.last_json["user"]["following_count"]
+#    media_count = ai.bot.api.last_json["user"]["media_count"]
 
-    return render_template("like_following.html", username=username,
-                           profile_pic=profile_pic, followers=followers,
-                           following=following, media_count=media_count);
+#    return render_template("like_following.html", username=username,
+#                           profile_pic=profile_pic, followers=followers,
+#                           following=following, media_count=media_count);
 
 @app.route("/repost_images_ai")
 def repost_images_ai():
@@ -287,17 +287,17 @@ def like_followersai():
                            profile_pic=profile_pic, followers=followers,
                            following=following, media_count=media_count);
 
-@app.route("/like_hashtags")
-def like_hashtags():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
+#@app.route("/like_hashtags")
+#def like_hashtags():
+#    ai.bot.api.get_self_username_info()
+#    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+#    followers = ai.bot.api.last_json["user"]["follower_count"]
+#    following = ai.bot.api.last_json["user"]["following_count"]
+#    media_count = ai.bot.api.last_json["user"]["media_count"]
 
-    return render_template("like_hashtags.html", username=username,
-                           profile_pic=profile_pic, followers=followers,
-                           following=following, media_count=media_count);
+#    return render_template("like_hashtags.html", username=username,
+#                           profile_pic=profile_pic, followers=followers,
+#                           following=following, media_count=media_count);
 
 @app.route("/like_hashtagsai")
 def like_hashtagsai():
@@ -336,59 +336,59 @@ def follow_following():
                            profile_pic=profile_pic, followers=followers,
                            following=following, media_count=media_count);
 
-@app.route("/comment_followers")
-def comment_followers():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
+#@app.route("/comment_followers")
+#def comment_followers():
+ #   ai.bot.api.get_self_username_info()
+  #  profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+   # followers = ai.bot.api.last_json["user"]["follower_count"]
+  #  following = ai.bot.api.last_json["user"]["following_count"]
+  #  media_count = ai.bot.api.last_json["user"]["media_count"]
 
-    return render_template("comment_followers.html", username=username,
-                           profile_pic=profile_pic, followers=followers,
-                           following=following, media_count=media_count);
+   # return render_template("comment_followers.html", username=username,
+    #                       profile_pic=profile_pic, followers=followers,
+     #                      following=following, media_count=media_count);
 
-@app.route("/comment_following")
-def comment_following():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
+#@app.route("/comment_following")
+#def comment_following():
+#    ai.bot.api.get_self_username_info()
+ #   profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+  #  followers = ai.bot.api.last_json["user"]["follower_count"]
+   # following = ai.bot.api.last_json["user"]["following_count"]
+   # media_count = ai.bot.api.last_json["user"]["media_count"]
 
-    return render_template("comment_following.html", username=username,
-                           profile_pic=profile_pic, followers=followers,
-                           following=following, media_count=media_count);
+   # return render_template("comment_following.html", username=username,
+    #                       profile_pic=profile_pic, followers=followers,
+     #                      following=following, media_count=media_count);
 
-@app.route("/like_self_media_comments")
-def like_self_media_comments():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
+#@app.route("/like_self_media_comments")
+#def like_self_media_comments():
+#    ai.bot.api.get_self_username_info()
+ #   profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
+  #  followers = ai.bot.api.last_json["user"]["follower_count"]
+   # following = ai.bot.api.last_json["user"]["following_count"]
+#    media_count = ai.bot.api.last_json["user"]["media_count"]
 
-    x = 0
-    y = 0
-    while True:
-        try:
-            ai.bot.api.get_total_self_user_feed(min_timestamp=None)
-            item = ai.bot.api.last_json["items"][x]["caption"]["media_id"]
-            ai.bot.like_media_comments(item)
-            print("sleeping for 120 seconds")
-            time.sleep(120)
-            x += 1
-            y = 0
-            print("Like comments on next picture")
-        except:
-            time.sleep(120)
-            print("Like comments on next picture")
-            x += 1
-            if y == 4:
-                x = 0
-    return render_template("like_self_media_comments.html", username=username,
-                       profile_pic=profile_pic, followers=followers,
-                       following=following, media_count=media_count);
+ #   x = 0
+  #  y = 0
+   # while True:
+    #    try:
+     #       ai.bot.api.get_total_self_user_feed(min_timestamp=None)
+      #      item = ai.bot.api.last_json["items"][x]["caption"]["media_id"]
+       #     ai.bot.like_media_comments(item)
+        #    print("sleeping for 120 seconds")
+         #   time.sleep(120)
+          #  x += 1
+#            y = 0
+#            print("Like comments on next picture")
+#        except:
+#            time.sleep(120)
+#            print("Like comments on next picture")
+#            x += 1
+#            if y == 4:
+#                x = 0
+#    return render_template("like_self_media_comments.html", username=username,
+#                       profile_pic=profile_pic, followers=followers,
+#                       following=following, media_count=media_count);
 
 @app.route("/start_repost_images", methods=['GET', 'POST'])
 def start_repost_images():
@@ -743,122 +743,6 @@ def watch_all_stories():
                            profile_pic=profile_pic, followers=followers,
                            following=following, media_count=media_count);
 
-
-
-
-@app.route("/start_multibot")
-def multibot():
-    ai.bot.api.get_self_username_info()
-    profile_pic = ai.bot.api.last_json["user"]["profile_pic_url"]
-    followers = ai.bot.api.last_json["user"]["follower_count"]
-    following = ai.bot.api.last_json["user"]["following_count"]
-    media_count = ai.bot.api.last_json["user"]["media_count"]
-    def watch_all_stories():
-
-        watch_username = str(args.u)
-        if len(sys.argv) >= 10:
-            ai.bot.logger.info(
-                """
-                    Going to get '%s' likers and watch their stories (and stories of their likers too).
-                """ % (sys.argv[1])
-            )
-            user_to_get_likers_of = ai.bot.convert_to_user_id(sys.argv[1])
-        else:
-            ai.bot.logger.info(
-                """
-                    Going to get """ + watch_username + """ likers and watch their stories (and stories of their likers too).
-                    You can specify username of another user to start (by default we use you as a starting point).
-                """
-            )
-            user_to_get_likers_of = ai.bot.get_user_id_from_username(watch_username)
-
-        current_user_id = user_to_get_likers_of
-        while True:
-            try:
-                # GET USER FEED
-                if not ai.bot.api.get_user_feed(current_user_id):
-                    print("Can't get feed of user_id=%s" % current_user_id)
-
-                # GET MEDIA LIKERS
-                user_media = random.choice(ai.bot.api.last_json["items"])
-                if not ai.bot.api.get_media_likers(media_id=user_media["pk"]):
-                    ai.bot.logger.info(
-                        "Can't get media likers of media_id='%s' by user_id='%s'" % (user_media["pk"], current_user_id)
-                    )
-
-                likers = ai.bot.api.last_json["users"]
-                liker_ids = [
-                    str(u["pk"]) for u in likers if not u["is_private"] and "latest_reel_media" in u
-                ][:20]
-
-                # WATCH USERS STORIES
-                if ai.bot.watch_users_reels(liker_ids):
-                    ai.bot.logger.info("Total stories viewed: %d" % ai.bot.total["stories_viewed"])
-
-                # CHOOSE RANDOM LIKER TO GRAB HIS LIKERS AND REPEAT
-                current_user_id = random.choice(liker_ids)
-
-                if random.random() < 0.05:
-                    current_user_id = user_to_get_likers_of
-                    ai.bot.logger.info("Sleeping and returning back to original user_id=%s" % current_user_id)
-                    time.sleep(90 * random.random() + 60)
-
-            except Exception as e:
-                # If something went wrong - sleep long and start again
-                ai.bot.logger.info(e)
-                current_user_id = user_to_get_likers_of
-                time.sleep(240 * random.random() + 60)
-
-    def reply_pending_messages():
-        reply_pending = 0
-        while True:
-            try:
-                ai.bot.api.get_pending_inbox()
-                for w in ai.bot.api.last_json["inbox"]["threads"]:
-                    thread_id = w["thread_id"]
-                    username = w["users"][0]["username"]
-                    full_name = w["users"][0]["full_name"]
-                    userid = ai.bot.get_user_id_from_username(username)
-                    reply_pending += 1
-                    print("Reply pending message " + thread_id)
-                    print("Replied Pending messages: " + str(reply_pending))
-                    ai.bot.api.approve_pending_thread(thread_id)
-                    ai.bot.send_message("Thanks " +str(full_name) +  ", please comment and like all my pictures also follow me", userid, thread_id=thread_id)
-                    time.sleep(60)
-            except:
-                time.sleep(160)
-                pass
-
-    def like_self_media_comments():
-        x = 0
-        y = 0
-        while True:
-            try:
-                ai.bot.api.get_total_self_user_feed(min_timestamp=None)
-                item = ai.bot.api.last_json["items"][x]["caption"]["media_id"]
-                ai.bot.like_media_comments(item)
-                print("sleeping for 120 seconds")
-                time.sleep(120)
-                x += 1
-                y = 0
-                print("Like comments on next picture")
-            except:
-                time.sleep(120)
-                print("Like comments on next picture")
-                x += 1
-                if y == 4:
-                    x = 0
-
-
-    thread1 = threading.Timer(7.0, watch_all_stories)
-    thread2 = threading.Timer(13.0, reply_pending_messages)
-    thread3 = threading.Timer(2.0, like_self_media_comments)
-    thread1.start()
-    thread2.start()
-    thread3.start()
-    return render_template("multibot.html", username=username,
-                       profile_pic=profile_pic, followers=followers,
-                       following=following, media_count=media_count);
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=8000, debug=False)
