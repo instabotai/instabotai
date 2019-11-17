@@ -368,7 +368,7 @@ class Bots(object):
         while True:
             hashtags = Bots.convert_usernames_to_list(hashtags)
             for hashtag in hashtags:
-                hashtags = bot.get_total_hashtag_medias(hashhtag)
+                hashtags = bot.get_total_hashtag_medias(hashtag)
                 for user in hashtags:
                     pusername = bot.get_username_from_user_id(user)
                     Bots.face_detection_comment(pusername, comment)
