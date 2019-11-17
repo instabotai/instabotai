@@ -1,1 +1,3 @@
 import instabot
+
+print("test")
