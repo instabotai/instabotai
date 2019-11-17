@@ -52,7 +52,7 @@ def challenge_solved():
 
     code = request.form['code']
     code = str(code)
-    process.communicate(input=code.encode())[1]
+#    process.communicate(input=code.encode())[1]
     time.sleep(5)
     profile_pic = open_file("profilepic")
     follower_count = open_file("followers_count")
