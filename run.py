@@ -532,7 +532,7 @@ def start_like_followersai():
     time_sleep = int(time_sleep)
     ai.Bots.like_followers(followers_username, time_sleep)
 #    process = subprocess.Popen(["python like_followersai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
-    session["subprocess"] = process.pid
+#    session["subprocess"] = process.pid
     return render_template("like_followersai.html", username=username,
                        profile_pic=profile_pic, followers=followers,
                        following=following, media_count=media_count);
@@ -597,9 +597,9 @@ def start_like_followers():
     media_count = session.get("media_count")
 
     followers_username = request.form['followers_username']
-#    ai.bot.like_followers(followers_username)
-    process = subprocess.Popen(["python like_followersgai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
-    session["subprocess"] = process.pid
+    ai.bot.like_followers(followers_username)
+#    process = subprocess.Popen(["python like_followersgai.py " "-u " + username + " -p " + password + " -user " + followers_username + " -sleep " + time_sleep], shell=True)
+#    session["subprocess"] = process.pid
 
     return render_template("like_followers.html", username=username,
                        profile_pic=profile_pic, followers=followers,
