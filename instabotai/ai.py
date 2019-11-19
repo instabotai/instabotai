@@ -508,6 +508,7 @@ class Bots(object):
 
     def follow_users_followers_ai(username, time_sleep):
         Bots.save_user_info(ig_username, "Scraping users pls wait 2-4 min")
+        time.sleep(60)
         while True:
             try:
                 username = Bots.convert_usernames_to_list(username)
@@ -531,6 +532,7 @@ class Bots(object):
 
     def follow_users_hashtag_ai(hashtag, time_sleep):
         Bots.save_user_info(ig_username, "Scraping users pls wait 2-4 min")
+        time.sleep(60)
         while True:
             hashtags = Bots.convert_usernames_to_list(hashtag)
             for hashtag in hashtags:
