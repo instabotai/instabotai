@@ -7,9 +7,7 @@ import random
 import sys, stat
 from mtcnn.mtcnn import MTCNN
 import cv2
-#import json
 import random
-#import logging
 import shutil
 
 try:
@@ -302,6 +300,7 @@ class Bots(object):
 
     def like_followers(username, time_sleep):
         Bots.save_user_info(ig_username, "Scraping users pls wait 2-4 min")
+        time.sleep(60)
         user_id = bot.get_user_id_from_username(username)
         followers = bot.get_user_followers(user_id, nfollows=6000)
 
@@ -313,7 +312,7 @@ class Bots(object):
 
     def like_following(username, time_sleep):
         Bots.save_user_info(ig_username, "Scraping users pls wait 2-4 min")
-        Bots.save_user_info(ig_username, "Scraping users pls wait 2-4 min")
+        time.sleep(60)
         user_id = bot.get_user_id_from_username(username)
         following = bot.get_user_following(user_id)
 
@@ -329,6 +328,7 @@ class Bots(object):
         @params: time_sleep (int),
         '''
         Bots.save_user_info(ig_username, "Scraping users pls wait 2-4 min")
+        time.sleep(60)
         hashtags = bot.get_hashtag_users(hashtag)
         while True:
             hashtags = Bots.convert_usernames_to_list(hashtag)
