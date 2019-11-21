@@ -28,7 +28,7 @@ DEVICES = {
     },
     # Released on February 2018
     'samsung_galaxy_s9_plus': {
-        'instagram_version': '118.0.0.28.122',
+        'instagram_version': '121.0.0.3.119',
         'android_version': 24,
         'android_release': '7.0',
         'dpi': '640dpi',
