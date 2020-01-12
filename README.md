@@ -86,3 +86,6 @@ To install tensorflow on your system without pip.
 ### Arch Linux:
 Pacman -S tensorflow
 
+## Legal
+
+Disclaimer: This is not affliated, endorsed or certified by Instagram. This is an independent and unofficial API. Strictly **not for spam**. Use at your own risk
