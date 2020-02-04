@@ -8,6 +8,8 @@
  [![Build Status](https://travis-ci.org/instagrambot/instabot.svg?branch=master)](https://travis-ci.org/instagrambot/instabotai)
 ![Python 2.7, 3.5, 3.6, 3.7](https://img.shields.io/badge/python-2.7%2C%203.5%2C%203.6%2C%203.7-blue.svg)
 
+## Websites which use our software illegal (Without license):
+https://www.ektor.io
 
 ## Do you like this project? Support it by donating
 
