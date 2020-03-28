@@ -1,3 +1,5 @@
+## This project does not get updated anymore, the reason is i made $50 on it for 8 months, while other devs stole it and resold it and made over $100.000, I will not update it again so do not ask me. 
+
 ![image](https://raw.githubusercontent.com/instabotai/instabotai/master/img/banner.png)
 ---
 ### | [Website](https://instabotai.com/) | [Read the Docs](https://instabotai.github.io/docs/) | [Contribute](https://github.com/instagrambot/docs/blob/master/CONTRIBUTING.md) |
@@ -7,6 +9,7 @@
  [![Telegram Chat](https://camo.githubusercontent.com/67fd2a1c7649422a770e7d82cb35795c2a8baf32/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742532306f6e2d54656c656772616d2d626c75652e737667)](https://t.me/instabotai)
  [![Build Status](https://travis-ci.org/instagrambot/instabot.svg?branch=master)](https://travis-ci.org/instagrambot/instabotai)
 ![Python 2.7, 3.5, 3.6, 3.7](https://img.shields.io/badge/python-2.7%2C%203.5%2C%203.6%2C%203.7-blue.svg)
+
 
 ## Websites which use our software illegal (Without license):
 https://www.ektor.io
