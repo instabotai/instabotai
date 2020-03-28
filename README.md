@@ -1,4 +1,4 @@
-## This project does not get updated anymore, the reason is i made $50 on it for 8 months, while other devs stole it and resold it and made over $100.000, I will not update it again so do not ask me. 
+## This project does not get updated any more, the reason is i made $50 on it for 8 months, while other devs stole it and resold it and made over $100.000, I will not update it again so do not ask me. 
 
 ![image](https://raw.githubusercontent.com/instabotai/instabotai/master/img/banner.png)
 ---
