@@ -2,7 +2,7 @@
 
 ![image](https://raw.githubusercontent.com/instabotai/instabotai/master/img/banner.png)
 ---
-### | Read the Docs](https://instabotai.github.io/docs/) | [Contribute](https://github.com/instagrambot/docs/blob/master/CONTRIBUTING.md) |
+### | [Read the Docs](https://instabotai.github.io/docs/) | [Contribute](https://github.com/instagrambot/docs/blob/master/CONTRIBUTING.md) |
 [![Run on Repl.it](https://repl.it/badge/github/instabotai/instabotai)](https://repl.it/github/instabotai/instabotai)
 ---
  [![PyPI version](https://badge.fury.io/py/instabotai.svg)](https://badge.fury.io/py/instabotai)
